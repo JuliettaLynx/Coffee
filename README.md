@@ -2,4 +2,4 @@
 ## Проект
 Этот репозиторий является структурой веб-страницы на основе готового макета.
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://juliettalynx.github.io/pz2/)
+- [Публичная страница на GitHub Pages](https://juliettalynx.github.io/Coffee/)
