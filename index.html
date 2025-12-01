@@ -11,13 +11,10 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/img/LOGO.png" alt="logo">
-        </div>
-        <div class="basket">
-            <img src="assets/icons/shop_cart.png" alt="basket">
-        </div>
         <div class="menu">
+            <div class="basket">
+                <img src="assets/icons/shop_cart.png" alt="basket">
+            </div>
             <h2>TRANG CHỦ</h2>
             <nav>
                 <ul>
@@ -43,38 +40,41 @@
 
     <main>
         <section id="hero">
+            <div class="logo">
+                <img src="assets/img/LOGO.png" alt="logo">
+            </div>
             <div>
-                <h1>Your <br> <span style="color: white; background-color: #C7A17A">Personalized</span> <br>Coffee</h1>
+                <h1><b>YOUR <br> <span style="color: white; background-color: #C7A17A; padding: 5px;">PERSONALIZED</span> <br>COFFEE</b></h1>
             </div>
             <div class="banner">
-                <img src="assets/img/Banner.png">
+                <img src="assets/img/Banner.png" alt="banner">
             </div>
         </section>
 
         <section id="about">
-            <h3>Your Personalized Coffee</h3>
-            <h1>COFFEE BUILD YOUR BASE</h1>
+            <h3 class="semisemititle">Your Personalized Coffee</h3>
+            <h1 class="semititle"><b>COFFEE BUILD YOUR BASE</b></h1>
 
             <div class="card_about">
-                <img src="assets/icons/icon1.png">
+                <img src="assets/icons/icon1.png" alt="icon1">
                 <h2>Nguồn gốc</h2>
                 <p>Những hạt cà phê Arabica, Robusta đạt chất lượng theo tiêu chuẩn quốc tế.</p>
             </div>
 
             <div class="card_about">
-                <img src="assets/icons/icon2.png">
+                <img src="assets/icons/icon2.png" alt="icon2">
                 <h2>Chất lượng</h2>
                 <p>Từng một hạt cà phê là cả một quá trình tập trung cao độ của nghệ nhân cà phê.</p>
             </div>
 
             <div class="card_about">
-                <img src="assets/icons/icon3.png">
+                <img src="assets/icons/icon3.png" alt="icon3">
                 <h2>Các loại hạt</h2>
                 <p>70% chất lượng tách cà phê đến từ nguồn gốc và chất lượng green bean.</p>
             </div>
 
             <div class="card_about">
-                <img src="assets/icons/icon4.png">
+                <img src="assets/icons/icon4.png" alt="icon4">
                 <h2>Pha chế</h2>
                 <p>Những hạt cà phê được lột xác qua quá trình rang xay kỹ lưỡng và nghiêm ngặt.</p>
             </div>
@@ -82,159 +82,479 @@
         </section>
 
         <section id="catalog">
-            <h3>Choose Your Favorite</h3>
-            <h1>CHUẨN GU ĐÚNG VỊ</h1>
-            <div class="card_catalog">
-                <div class="item_img">
-                    <img src="assets/img/img1.png" alt="item1">
-                </div>
-                <div>
-                    <p class="price">99.000</p>
-                    <h3>REVO Morning</h3>
-                    <p>đắng, hậu ngọt , hương hoa</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
-                    </div>
-                </div>
-            </div>
+            <h3 class="semisemititle">Choose Your Favorite</h3>
+            <h1 class="semititle"><b>CHUẨN GU ĐÚNG VỊ</b></h1>
+            <button class="carousel_btn">❯</button>
             
-            <div class="card_catalog">
-                <div class="item_img">
-                    <img src="assets/img/img2.png" alt="item2">
-                </div>
-                <div>
-                    <p class="price">139.000</p>
-                    <h3>REVO Origin</h3>
-                    <p>hậu ngọt, ít đắng, vị chua dâu</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+            <div class="card_carusel">
+
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img1.png" alt="item1">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">99.000</p>
+                        <h3>REVO Morning</h3>
+                        <p >đắng, hậu ngọt , hương hoa</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card_catalog">
-                <div class="item_img">
-                    <img src="assets/img/img3.png" alt="item3">
-                </div>
-                <div>
-                    <p class="price">85.000</p>
-                    <h3>REVO Everyday</h3>
-                    <p>cân bằng, hậu đắng, vị chocolate</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img3.png" alt="item3">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">85.000</p>
+                        <h3>REVO Everyday</h3>
+                        <p>cân bằng, hậu đắng, vị chocolate</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card_catalog">
-                <div class="item_img">
-                    <img src="assets/img/img4.png" alt="item4">
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img5.png" alt="item5">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">99.000</p>
+                        <h3>REVO Morning</h3>
+                        <p>đắng, hậu ngọt , hương hoa</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="price">75.000</p>
-                    <h3>REVO Đậm Đà</h3>
-                    <p>đậm đà, đắng, truyền thống</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+                
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img2.png" alt="item2">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">139.000</p>
+                        <h3>REVO Origin</h3>
+                        <p>hậu ngọt, ít đắng, vị chua dâu</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img4.png" alt="item4">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">75.000</p>
+                        <h3>REVO Đậm Đà</h3>
+                        <p>đậm đà, đắng, truyền thống</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="item_img">
+                        <img src="assets/img/img6.png" alt="item6">
+                    </div>
+                    <div class="card_text">
+                        <p class="price">139.000</p>
+                        <h3>REVO Origin</h3>
+                        <p>hậu ngọt, ít đắng, vị chua dâu</p>
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
         <section id="giftset">
-            <h3>Best Gift For Best Friend</h3>
-            <h1>GIFTSET</h1>
-            <div class="giftset_img">
-                <img src="assets/img/giftset.png" alt="giftset1">
+            <h3 class="semisemititle">Best Gift For Best Friend</h3>
+            <h1 class="semititle"><b>GIFTSET</b></h1>
+
+            <div class="gift_buttons">
+                <a href="#gift1" class="gift_btn active"><b>1</b></a>
+                <a href="#gift2" class="gift_btn"><b>2</b></a>
+                <a href="#gift3" class="gift_btn"><b>3</b></a>
             </div>
 
-            <div class="giftset_desc">
-                <p class="price">285.000</p>
-                <h2>Giftset "Cà phê phin Việt Nam"</h2>
-                <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
-                <div class="details">
-                    <div class="detail">
-                        <img src="assets/icons/coffee.png">
-                        <h4>Loại hạt</h4>
-                        <p>Fine Robusta Blend</p>
+
+            <div id="gift1" class="giftset_card">
+                <div class="giftset_img">
+                    <img src="assets/img/giftset.png" alt="giftset1">
+                </div>
+
+                <div class="giftset_desc">
+                    <p class="price">285.000</p>
+                    <h2>Giftset "Cà phê phin Việt Nam"</h2>
+                    <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                    <div class="details">
+                        <div class="detail">
+                            <img src="assets/icons/coffee.png" alt="coffee">
+                            <div class="det">
+                                <h4>Loại hạt</h4>
+                                <p>Fine Robusta Blend</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <img src="assets/icons/mountain.png" alt="mountain">
+                            <div class="det">
+                                <h4>Độ cao</h4>
+                                <p>700 - 800m</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="detail">
-                        <img src="assets/icons/mountain.png">
-                        <h4>Độ cao</h4>
-                        <p>700 - 800m</p>
+
+                    <div class="buttons">
+                        <button class="btn1"><b>MUA NGAY</b></button>
+                        <button class="btn2"><b>CHI TIẾT</b></button>
                     </div>
                 </div>
-                <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+            </div>
+
+            <div id="gift2" class="giftset_card">
+                <div class="giftset_img">
+                    <img src="assets/img/giftset2.png" alt="giftset2">
+                </div>
+
+                <div class="giftset_desc">
+                    <p class="price">285.000</p>
+                    <h2>Giftset "Cà phê phin Việt Nam"</h2>
+                    <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                    <div class="details">
+                        <div class="detail">
+                            <img src="assets/icons/coffee.png" alt="coffee">
+                            <div class="det">
+                                <h4>Loại hạt</h4>
+                                <p>Fine Robusta Blend</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <img src="assets/icons/mountain.png" alt="mountain">
+                            <div class="det">
+                                <h4>Độ cao</h4>
+                                <p>700 - 800m</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btn1"><b>MUA NGAY</b></button>
+                        <button class="btn2"><b>CHI TIẾT</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gift3" class="giftset_card">
+                <div class="giftset_img">
+                    <img src="assets/img/giftset3.png" alt="giftset3">
+                </div>
+
+                <div class="giftset_desc">
+                    <p class="price">285.000</p>
+                    <h2>Giftset "Cà phê phin Việt Nam"</h2>
+                    <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng cho bạn.</p>
+                    <div class="details">
+                        <div class="detail">
+                            <img src="assets/icons/coffee.png" alt="coffee">
+                            <div class="det">
+                                <h4>Loại hạt</h4>
+                                <p>Fine Robusta Blend</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <img src="assets/icons/mountain.png" alt="mountain">
+                            <div class="det">
+                                <h4>Độ cao</h4>
+                                <p>700 - 800m</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btn1"><b>MUA NGAY</b></button>
+                        <button class="btn2"><b>CHI TIẾT</b></button>
+                    </div>
                 </div>
             </div>
 
         </section>
 
         <section id="combo">
-            <h3>Choose Your Favorite</h3>
-            <h1>CHUẨN GU ĐÚNG VỊ</h1>
+            <h3 class="semisemititle">Choose Your Favorite</h3>
+            <h1 class="semititle"><b>CHUẨN GU ĐÚNG VỊ</b></h1>
+            <button class="combo_carousel_btn">❯</button>
 
-            <div class="combo_card">
-                <div class="item_img">
-                    <img src="assets/img/combo1.png" alt="item1">
-                </div>
-                <div>
-                    <p class="price">147.000</p>
-                    <p class="old_price">155.000</p>
-                    <h3>Combo Revo Đậm Đà</h3>
-                    <p>Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+
+            <div class="combo_carusel">
+                <div class="combo_card">
+                    <div class="item_img">
+                        <img src="assets/img/combo1.png" alt="combo1">
                     </div>
-                </div>
-            </div>
+                    <div class="combo_text">
+                        <p class="price">147.000</p>
+                        <p class="old_price">155.000</p>
+                        <h3>Combo Revo Đậm Đà</h3>
+                        <p>Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...</p>
                         
-            <div class="combo_card">
-                <div class="item_img">
-                    <img src="assets/img/combo2.png" alt="item2">
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="price">156.000</p>
-                    <p class="old_price">165.000</p>
-                    <h3>Combo Revo Everyday</h3>
-                    <p>Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
+                            
+                <div class="combo_card">
+                    <div class="item_img">
+                        <img src="assets/img/combo2.png" alt="combo2">
+                    </div>
+                    <div class="combo_text">
+                        <p class="price">156.000</p>
+                        <p class="old_price">165.000</p>
+                        <h3>Combo Revo Everyday</h3>
+                        <p>Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...</p>
+                        
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="combo_card">
+                    <div class="item_img">
+                        <img src="assets/img/combo3.png" alt="combo3">
+                    </div>
+                    <div class="combo_text">
+                        <p class="price">275.000</p>
+                        <p class="old_price">260.000</p>
+                        <h3>Combo Revo Honey</h3>
+                        <p>Honey trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...</p>
+                        
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="combo_card">
+                    <div class="item_img">
+                        <img src="assets/img/combo4.png" alt="combo4">
+                    </div>
+                    <div class="combo_text">
+                        <p class="price">249.000</p>
+                        <p class="old_price">236.000</p>
+                        <h3>Combo Revo Honey</h3>
+                        <p>Honey trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...</p>
+                        
+                        <div class="buttons">
+                            <button class="btn1"><b>MUA NGAY</b></button>
+                            <button class="btn2"><b>CHI TIẾT</b></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="combo_card">
-                <div class="item_img">
-                    <img src="assets/img/combo3.png" alt="item3">
-                </div>
-                <div>
-                    <p class="price">275.000</p>
-                    <p class="old_price">260.000</p>
-                    <h3>Combo Revo Honey</h3>
-                    <p>Honey trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...</p>
-                    <div class="buttons">
-                        <button class="btn1">MUA NGAY</button>
-                        <button class="btn2">CHI TIẾT</button>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
     </main>
 
     <footer id="footer">
-        <p>&copy; Revo Coffee Việt Nam - 2018</p>
+        <p><i>&copy; Revo Coffee Việt Nam - 2018</i></p>
     </footer>
-
 </body>
+
+<script>
+class CircularGridCarousel {
+  constructor(container) {
+    this.container = container;
+    this.carousel = container.querySelector('.card_carusel');
+    this.nextBtn = container.querySelector('.carousel_btn');
+    this.cards = Array.from(this.carousel.querySelectorAll('.card'));
+    
+    this.currentPosition = 0;
+    this.totalPositions = 3;
+    this.isAnimating = false;
+    this.init();
+  }
+  
+  init() {
+    this.nextBtn.addEventListener('click', () => this.next());
+    this.updateLayout();
+  }
+  
+  next() {
+    this.currentPosition = (this.currentPosition + 1) % this.totalPositions;
+    this.updateLayout();
+  }
+  
+  updateLayout() {
+    // Создаем массив индексов для новой расстановки
+    const newOrder = this.getNewOrder();
+    
+    // Переставляем карточки в DOM
+    newOrder.forEach((cardIndex, positionIndex) => {
+      const card = this.cards[cardIndex];
+      this.carousel.appendChild(card);
+    });    
+  }
+  
+  getNewOrder() {
+    const positions = [0, 1, 2, 3, 4, 5]; // 6 позиций в grid
+    
+    switch(this.currentPosition) {
+      case 0: // Исходное: 1,2,3 | 4,5,6
+        return [0, 1, 2, 3, 4, 5];
+        
+      case 1: // Положение 1: 2,3,1 | 5,6,4
+        return [1, 2, 0, 4, 5, 3];
+        
+      case 2: // Положение 2: 3,1,2 | 6,4,5
+        return [2, 0, 1, 5, 3, 4];
+        
+      default:
+        return [0, 1, 2, 3, 4, 5];
+    }
+  }
+}
+
+// Инициализация карусели
+document.addEventListener('DOMContentLoaded', () => {
+  const catalogSection = document.getElementById('catalog');
+  if (catalogSection) {
+    new CircularGridCarousel(catalogSection);
+  }
+});
+
+
+
+// Инициализация giftset
+function initGiftset() {
+  const giftsetSection = document.getElementById('giftset');
+  if (!giftsetSection) return;
+  
+  // Находим все переключатели табов внутри giftset
+  const tabSwitchers = giftsetSection.querySelectorAll('.gift_btn[href^="#"], .tab-btn[href^="#"]');
+  
+  tabSwitchers.forEach(switcher => {
+    switcher.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      const targetTab = document.querySelector(href);
+      
+      // Если целевой таб находится ВНУТРИ giftset
+      if (targetTab && targetTab.closest('#giftset')) {
+        e.preventDefault(); // Блокируем стандартную прокрутку
+        
+        // Но всё равно показываем таб
+        showTabWithAnimation(href);
+      }
+      // Если ссылка ведет куда-то еще (например, #footer) - она работает
+    });
+  });
+  
+  function showTabWithAnimation(tabId) {
+    // 1. Скрываем все табы
+    document.querySelectorAll('#giftset .giftset_card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.display = 'none';
+    });
+    
+    // 2. Показываем нужный таб с анимацией
+    const activeTab = document.querySelector(tabId);
+    if (activeTab) {
+      activeTab.style.display = 'block';
+      setTimeout(() => {
+        activeTab.style.opacity = '1';
+      }, 10);
+      
+      // 3. Обновляем активные кнопки
+      tabSwitchers.forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.querySelector(`[href="${tabId}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  }
+}
+
+// Инициализируем при загрузке
+document.addEventListener('DOMContentLoaded', initGiftset);
+
+
+class ComboCircularGridCarousel {
+  constructor(container) {
+    this.container = container;
+    this.carousel = container.querySelector('.combo_carusel');
+    this.nextBtn = container.querySelector('.combo_carousel_btn');
+    this.combos = Array.from(this.carousel.querySelectorAll('.combo_card'));
+    
+    this.currentPosition = 0;
+    this.totalPositions = 4;
+    this.isAnimating = false;
+    this.init();
+  }
+  
+  init() {
+    this.nextBtn.addEventListener('click', () => this.next());
+    this.updateLayout();
+  }
+  
+  next() {
+    this.currentPosition = (this.currentPosition + 1) % this.totalPositions;
+    this.updateLayout();
+  }
+  
+  updateLayout() {
+    // Создаем массив индексов для новой расстановки
+    const newOrder = this.getNewOrder();
+    
+    // Переставляем карточки в DOM
+    newOrder.forEach((cardIndex, positionIndex) => {
+      const combo = this.combos[cardIndex];
+      this.carousel.appendChild(combo);
+    });    
+  }
+  
+  getNewOrder() {
+    const positions = [0, 1, 2, 3];
+    
+    switch(this.currentPosition) {
+      case 0: // Исходное: 1,2,3,4
+        return [0, 1, 2, 3];
+        
+      case 1: // Положение 1: 2,3,4,1
+        return [1, 2, 3, 0];
+        
+      case 2: // Положение 2: 3,4,1,2
+        return [2, 3, 0, 1];
+        
+      case 3: // Положение 3: 4,1,2,3
+        return [3, 0, 1, 2];
+
+      default:
+        return [0, 1, 2, 3];
+    }
+  }
+}
+
+// Инициализация карусели
+document.addEventListener('DOMContentLoaded', () => {
+  const comboSection = document.getElementById('combo');
+  if (comboSection) {
+    new ComboCircularGridCarousel(comboSection);
+  }
+});
+
+
+</script>
 </html>

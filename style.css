@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(to right, #ffffff 70%, #415167 30%);
+    height: 100vh;
+    z-index: 1;
+}
+
+.menu{
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    top: 200px;
+    left: min(82vw, 1150px);
+    color: #ffffff;
+}
+
+.menu h2{
+    font-size: 14px;
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 30px 0;
+}
+
+#hero{
+    position: absolute;
+    margin-top: -100vh;
+    z-index: 2;
+}
+
+.logo{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.basket{
+    position: absolute;
+    margin-top: -140px;
+    z-index: 10;
+}
+
+#hero h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    position: absolute;
+    color: #415167;
+    margin-top: 65vh;
+    margin-left: 15vw;
+    z-index: 3;
+}
+
+.banner{
+    background: white;
+    position: relative;
+    display: flex;
+    object-fit: contain;
+    margin-left: 30vw;
+    max-width: 50vw;
+    z-index: 2;
+    height: 100vh;
+}
+
+.semisemititle{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    top: 80px;
+    text-align: center;
+    color: #415167;
+}
+
+.semititle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    position: relative;
+    color: #415167;
+    text-align: center;
+    top: 80px;
+    margin-bottom: 100px;
+    z-index: 3;
+}
+
+#about {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.card_about{
+  display: inline-block;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 45px;
+  margin-top: 50px;
+}
+
+.card_about img{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.card_about h2{
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  color: #415167;
+}
+
+p{
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #415167;
+}
+
+#catalog {
+    position: relative;
+    background: linear-gradient(to left, #ffffff 75%, #415167 25%);
+    height: 1000px;
+}
+
+#catalog::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 90%;
+  width: 10%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+
+.card_carusel{
+  display: grid;
+  overflow: hidden;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-rows: repeat(2, auto); /* 2 строки */
+  transition: transform 0.5s ease;
+  margin-left: 150px;
+  margin-top: 65px;
+  transition: opacity 0.5s ease;
+}
+
+.card {
+  margin: 20px;
+  min-width: 570px;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden; /* убираем прокрутку */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 10px #41516722;
+}
+
+.item_img {
+  background: #f0f0f0;
+  min-width: 150px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.card_text{
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  height: 100%;
+  padding-top: 40px;
+}
+
+.price{
+  color: #C7A17A;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card_text h3{
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  color: #415167;
+  margin-bottom: 20px;
+}
+
+.buttons{
+  margin-top: 20px;
+}
+
+.btn1{
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #C7A17A;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn1:hover{
+  color: #415167;
+  background: #fff2e5;
+}
+
+.btn2{
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #415167;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel_btn {
+  position: absolute;
+  margin-top: 265px;
+  margin-left: 90vw;
+  background: #C7A17A;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+#giftset {
+    position: relative;
+    background: linear-gradient(to right, #EDF0F5 75%, #ffffff 25%);
+    height: 800px;
+}
+
+.giftset_card {
+  display: none;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#gift1 {
+  display: block;
+  opacity: 1;
+}
+
+.giftset_card:target ~ .giftset_card {
+  display: none;
+  opacity: 0;
+}
+
+.gift_buttons{
+  position: absolute;
+  top: 195px;
+  left: 79%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gift_btn{
+  background: #EDF0F5;
+  width: 100px;
+  height: 151px;
+  border: 1px solid #EDF0F5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #98a1ad;
+}
+
+.gift_btn.active{
+  background: #ffffff;
+  color: #415167;
+}
+
+.giftset_img {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 50px;
+  z-index: 10;
+}
+
+.giftset_desc{
+  position: relative;
+  margin-left: 25%;
+  max-width: 55%;
+  padding: 60px 50px 60px 250px;
+  background: #ffffff;
+  
+  border: 2px solid #EDF0F5;
+}
+
+.giftset_desc h2{
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  color: #415167;
+  margin: 10px 0;
+}
+
+
+.giftset_card .buttons .btn2{
+  margin-left: 150px;
+}
+
+.details{
+  margin-top: 20px;
+  display: inline-flex;
+  gap: 70px;
+}
+
+.detail{
+  display: inline-flex;
+  gap: 10px;
+}
+
+.det h4{
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #bcbcbc;
+}
+
+#combo {
+    position: relative;
+    background: linear-gradient(to right, #ffffff 75%, #415167 25%);
+    height: 850px;
+}
+
+#combo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 90%;
+  width: 10%;
+  height: 100%;
+  background-color: #415167a0;
+  z-index: 2;
+}
+
+.combo_carusel{
+  display: grid;
+  overflow: hidden;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  transition: transform 0.5s ease;
+  margin-left: 150px;
+  margin-top: 65px;
+  transition: opacity 0.5s ease;
+}
+
+.combo_card {
+  background: #ffffff;
+  margin: 20px;
+  min-width: 230px;
+  width: 350px;
+  max-height: 600px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden; /* убираем прокрутку */
+  transition: all 0.3s ease;
+}
+
+.combo_card:hover {
+    box-shadow: 0 0 20px 10px #41516722;
+}
+
+.old_price{
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 100px;
+  color: #41516795;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.combo_text{
+  margin: 35px;
+}
+
+.combo_card .buttons .btn2{
+  margin-left: 35px;
+}
+
+.combo_text h3{
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  color: #415167;
+  margin-bottom: 10px;
+}
+
+.combo_carousel_btn {
+  position: absolute;
+  margin-top: 270px;
+  margin-left: 88vw;
+  background: #C7A17A;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+footer p{
+  text-align: center;
+  background: #EDF0F5;
+  padding: 20px 0;
+  font-weight: 300;
+}
