@@ -72,7 +72,7 @@ header {
 
 .nav__link {
     text-decoration: none;
-    color: #2b3646; /* цвет текста */
+    color: #2b3646;
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
@@ -83,12 +83,6 @@ header {
 
 .nav__link:hover {
     color: #2b3646;
-}
-
-.basket {
-    position: absolute;
-    right: 20px;
-    top: 50%;
 }
 
 .basket img {
@@ -252,13 +246,11 @@ p {
   min-height: 600px; 
 }
 
-/* Стиль для видимых карточек (первые 4 в DOM) */
 .card_carusel .card:nth-child(-n+4) {
   display: flex;
   opacity: 1;
 }
 
-/* Стиль для скрытых карточек (последние 2 в DOM) */
 .card_carusel .card:nth-child(n+5) {
   position: absolute;
   opacity: 0;
@@ -275,6 +267,11 @@ p {
   transition: all 0.3s ease;
   height: 250px;
   width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(65,81,103, 0.15);
 }
 
 .item_img {
@@ -554,6 +551,11 @@ p {
   transition: all 0.3s ease;
 }
 
+.combo_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(65,81,103, 0.15);
+}
+
 .combo_text {
   padding: 1.5rem;
 }
@@ -656,17 +658,17 @@ footer p {
   color: #415167;
   margin: 1rem 1rem 0.5rem;
   text-align: left;
-  flex: 0 0 auto; /* Фиксированная высота заголовка */
+  flex: 0 0 auto; 
 }
 
 .masonry_item__text {
-  margin: 0; /* Убираем внешние отступы */
+  margin: 0;
   font-size: 14px;
   color: #666;
   margin: 0 1rem 1rem;
   text-align: left;
   line-height: 1.5;
-  flex: 1; /* Растягиваем текст для заполнения пространства */
+  flex: 1;
 }
 
 .masonry_item {
