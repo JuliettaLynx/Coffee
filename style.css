@@ -9,6 +9,8 @@
 body {
   line-height: 1.5;
   overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
+  color: #415167;
 }
 
 html {
@@ -23,7 +25,7 @@ html {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain
+  object-fit: contain;
 }
 
 a {
@@ -31,235 +33,332 @@ a {
   color: inherit;
 }
 
+/* ==================== HEADER ==================== */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(65,81,103, 0.2);
+    padding: 15px 0;
+}
+
+.menu {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; 
+}
+
+.nav__item {
+    margin: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #2b3646; /* цвет текста */
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav__link:hover {
+    color: #2b3646;
+}
+
+.basket {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+.basket img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.basket {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.basket button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.basket img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* ==================== HERO SECTION ==================== */
+#hero {
     position: relative;
     background: linear-gradient(to right, #ffffff 70%, #415167 30%);
-    height: 100vh;
+    min-height: 100vh;
     z-index: 1;
 }
 
-.menu{
+.logo {
     position: absolute;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    top: 200px;
-    left: min(82vw, 1150px);
-    color: #ffffff;
+    left: 7vw;
+    top: 60px;
+    z-index: 5;
 }
 
-.menu h2{
-    font-size: 14px;
-}
-
-.menu ul li {
-    list-style: none;
-    margin: 30px 0;
-}
-
-#hero{
+.hero_content {
     position: absolute;
-    margin-top: -100vh;
-    z-index: 2;
+    min-height: 100vh;
+    margin-top: 65vh;
+    margin-left: 10vw;
 }
 
-.logo{
+.hero_content h1 {
     position: absolute;
-    margin-top: 50px;
-    margin-left: 200px;
-}
-
-.basket{
-    position: absolute;
-    margin-top: -140px;
-    z-index: 10;
-}
-
-#hero h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     font-weight: bolder;
-    position: absolute;
     color: #415167;
-    margin-top: 65vh;
-    margin-left: 15vw;
-    z-index: 3;
-}
-
-.banner{
-    background: white;
-    position: relative;
+    line-height: 1.2;
+    margin-bottom: 2rem;
     display: flex;
-    object-fit: contain;
-    margin-left: 30vw;
-    max-width: 50vw;
-    z-index: 2;
-    height: 100vh;
+    z-index: 5;
 }
 
-.semisemititle{
-    position: relative;
+.banner {
+    position: absolute;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+    z-index: 2;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.semisemititle {
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Nunito', sans-serif;
-    top: 80px;
     text-align: center;
     color: #415167;
+    margin-bottom: 1rem;
 }
 
-.semititle{
+.semititle {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    position: relative;
     color: #415167;
     text-align: center;
-    top: 80px;
-    margin-bottom: 100px;
-    z-index: 3;
+    margin-bottom: 3rem;
 }
 
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #415167;
+    line-height: 1.6;
+}
+
+/* ==================== ABOUT SECTION ==================== */
 #about {
   text-align: center;
-  margin-bottom: 150px;
+  padding: 4rem 2rem;
+  background: #EDF0F5;
 }
 
-.card_about{
-  display: inline-block;
-  max-width: 200px;
-  text-align: center;
-  margin: 0 45px;
-  margin-top: 50px;
-}
-
-.card_about img{
-  display: block;
+.about_container {
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-top: 2rem;
 }
 
-.card_about h2{
-  font-family: 'Nunito', sans-serif;
+.card_about {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.card_about img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+}
+
+.card_about h2 {
   font-size: 24px;
   color: #415167;
+  margin-bottom: 1rem;
 }
 
-p{
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #415167;
-}
-
+/* ==================== CATALOG SECTION ==================== */
 #catalog {
     position: relative;
     background: linear-gradient(to left, #ffffff 75%, #415167 25%);
-    height: 1000px;
+    padding: 4rem 2rem;
+    min-height: 1000px;
+    overflow: hidden;
 }
 
-#catalog::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 90%;
-  width: 10%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 2;
-}
-
-
-.card_carusel{
+.card_carusel {
   display: grid;
-  overflow: hidden;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-  grid-template-rows: repeat(2, auto); /* 2 строки */
-  transition: transform 0.5s ease;
-  margin-left: 150px;
-  margin-top: 65px;
-  transition: opacity 0.5s ease;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 600px; 
+}
+
+/* Стиль для видимых карточек (первые 4 в DOM) */
+.card_carusel .card:nth-child(-n+4) {
+  display: flex;
+  opacity: 1;
+}
+
+/* Стиль для скрытых карточек (последние 2 в DOM) */
+.card_carusel .card:nth-child(n+5) {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
 }
 
 .card {
-  margin: 20px;
-  min-width: 570px;
-  max-height: 250px;
+  background: white;
   display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  overflow: hidden; /* убираем прокрутку */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(65,81,103, 0.15);
   transition: all 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 0 20px 10px #41516722;
+  height: 250px;
+  width: 100%;
 }
 
 .item_img {
+  flex: 0 0 150px;
   background: #f0f0f0;
-  min-width: 150px;
-  width: auto;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.card_text{
-  width: 100%;
-  text-align: center;
-  background: #ffffff;
-  height: 100%;
-  padding-top: 40px;
+.item_img img {
+  max-height: 200px;
+  object-fit: contain;
 }
 
-.price{
+.card_text {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
   color: #C7A17A;
-  font-family: 'Nunito', sans-serif;
   font-size: 20px;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
-.card_text h3{
-  font-family: 'Nunito', sans-serif;
+.card_text h3 {
   font-size: 24px;
   color: #415167;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
 }
 
-.buttons{
-  margin-top: 20px;
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.btn1{
+.btn1 {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #ffffff;
   background-color: #C7A17A;
-  padding: 5px 20px;
+  padding: 0.5rem 1.4rem;
   border-radius: 25px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.btn1:hover{
+.btn1:hover {
   color: #415167;
   background: #fff2e5;
 }
 
-.btn2{
+.btn2 {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #415167;
-  background-color: #ffffff;
-  padding: 5px 20px;
-  border: none;
+  background-color: transparent;
+  padding: 0.5rem 1.4rem;
+  border: 1px solid #415167;
+  border-radius: 25px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: #415167;
+  color: white;
 }
 
 .carousel_btn {
   position: absolute;
-  margin-top: 265px;
-  margin-left: 90vw;
+  right: 2rem;
+  top: 46%;
   background: #C7A17A;
   color: white;
   border: none;
@@ -270,180 +369,216 @@ p{
   cursor: pointer;
   z-index: 10;
   transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.carousel_btn:hover {
+  background: #b5916a;
+}
+
+
+/* ==================== GIFTSET SECTION ==================== */
 #giftset {
     position: relative;
     background: linear-gradient(to right, #EDF0F5 75%, #ffffff 25%);
-    height: 800px;
+    padding: 4rem 2rem;
+    min-height: 800px;
 }
 
 .giftset_card {
   display: none;
-  padding: 20px;
+  flex-direction: row; 
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 80%;
+  box-shadow: -4px 4px 20px rgba(65,81,103, 0.15);
+  animation: fadeIn 0.5s ease;
+  min-height: 400px;
+  margin: 0 auto;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
-#gift1 {
-  display: block;
+.giftset_card.active {
+  display: flex;
+  flex-direction: row;
   opacity: 1;
+  align-items: stretch;
 }
 
-.giftset_card:target ~ .giftset_card {
-  display: none;
-  opacity: 0;
+.giftset_img {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 2rem;
 }
 
-.gift_buttons{
-  position: absolute;
-  top: 195px;
-  left: 79%;
+.giftset_img img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.giftset_desc {
+  flex: 1;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.gift_btn{
+.giftset_desc .price {
+  color: #C7A17A;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.giftset_desc h2 {
+  font-size: 24px;
+  color: #415167;
+  margin: 1rem 0;
+}
+
+.gift_buttons {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 5;
+}
+
+.gift_btn {
   background: #EDF0F5;
-  width: 100px;
-  height: 151px;
-  border: 1px solid #EDF0F5;
+  width: 60px;
+  height: 60px;
+  border: none;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #98a1ad;
-}
-
-.gift_btn.active{
-  background: #ffffff;
-  color: #415167;
-}
-
-.giftset_img {
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 50px;
-  z-index: 10;
-}
-
-.giftset_desc{
-  position: relative;
-  margin-left: 25%;
-  max-width: 55%;
-  padding: 60px 50px 60px 250px;
-  background: #ffffff;
-  
-  border: 2px solid #EDF0F5;
-}
-
-.giftset_desc h2{
-  font-family: 'Nunito', sans-serif;
-  font-size: 24px;
-  color: #415167;
-  margin: 10px 0;
-}
-
-
-.giftset_card .buttons .btn2{
-  margin-left: 150px;
-}
-
-.details{
-  margin-top: 20px;
-  display: inline-flex;
-  gap: 70px;
-}
-
-.detail{
-  display: inline-flex;
-  gap: 10px;
-}
-
-.det h4{
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #bcbcbc;
-}
-
-#combo {
-    position: relative;
-    background: linear-gradient(to right, #ffffff 75%, #415167 25%);
-    height: 850px;
-}
-
-#combo::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 90%;
-  width: 10%;
-  height: 100%;
-  background-color: #415167a0;
-  z-index: 2;
-}
-
-.combo_carusel{
-  display: grid;
-  overflow: hidden;
-  width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  transition: transform 0.5s ease;
-  margin-left: 150px;
-  margin-top: 65px;
-  transition: opacity 0.5s ease;
-}
-
-.combo_card {
-  background: #ffffff;
-  margin: 20px;
-  min-width: 230px;
-  width: 350px;
-  max-height: 600px;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  overflow: hidden; /* убираем прокрутку */
+  border-radius: 8px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.combo_card:hover {
-    box-shadow: 0 0 20px 10px #41516722;
+.gift_btn.active,
+.gift_btn:hover {
+  background: #ffffff;
+  color: #415167;
+  box-shadow: -4px 4px 20px rgba(65,81,103, 0.15);
 }
 
-.old_price{
+.details {
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.det h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #bcbcbc;
+  margin-bottom: 0.25rem;
+}
+
+.giftset_desc .buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.giftset_desc .btn1,
+.giftset_desc .btn2 {
+  min-width: 140px;
+  text-align: center;
+}
+
+/* ==================== COMBO SECTION ==================== */
+#combo {
+    position: relative;
+    background: linear-gradient(to right, #ffffff 75%, #415167 25%);
+    padding: 4rem 2rem;
+    min-height: 950px;
+    overflow: hidden;
+}
+
+.combo_carusel {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.combo_carusel .combo_card:nth-child(-n+3) {
+  display: block;
+  opacity: 1;
+}
+
+.combo_carusel .combo_card:nth-child(4) {
   position: absolute;
-  margin-top: -25px;
-  margin-left: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+.combo_card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px;
+  box-shadow: -4px 4px 20px rgba(65,81,103, 0.15);
+  transition: all 0.3s ease;
+}
+
+.combo_text {
+  padding: 1.5rem;
+}
+
+.old_price {
+  position: absolute;
   color: #41516795;
-  font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-decoration: line-through;
+  margin-left: 90px;
+  margin-top: -34px;
 }
 
-.combo_text{
-  margin: 35px;
-}
-
-.combo_card .buttons .btn2{
-  margin-left: 35px;
-}
-
-.combo_text h3{
-  font-family: 'Nunito', sans-serif;
-  font-size: 24px;
+.combo_text h3 {
+  font-size: 20px;
   color: #415167;
-  margin-bottom: 10px;
+  margin: 0.5rem 0;
 }
 
 .combo_carousel_btn {
   position: absolute;
-  margin-top: 270px;
-  margin-left: 88vw;
+  right: 5%;
+  top: 450px;
+  transform: translateY(-50%);
   background: #C7A17A;
   color: white;
   border: none;
@@ -456,9 +591,629 @@ p{
   transition: background 0.3s ease;
 }
 
-footer p{
-  text-align: center;
+.combo_carousel_btn:hover {
+  background: #b5916a;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
   background: #EDF0F5;
-  padding: 20px 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
   font-weight: 300;
+  color: #666;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+/* ==================== MASONRY GALLERY SECTION ==================== */
+#masonry_gallery {
+  background: linear-gradient(to left, #ffffff 75%, #415167 25%);
+  padding: 4rem 2rem;
+}
+
+.masonry_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 10px;
+  gap: 1rem;
+  margin: 2rem auto 0;
+}
+
+.masonry_item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(65,81,103, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 1.5rem;
+}
+
+.masonry_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(65,81,103, 0.15);
+}
+
+.masonry_item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.masonry_item__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: #415167;
+  margin: 1rem 1rem 0.5rem;
+  text-align: left;
+  flex: 0 0 auto; /* Фиксированная высота заголовка */
+}
+
+.masonry_item__text {
+  margin: 0; /* Убираем внешние отступы */
+  font-size: 14px;
+  color: #666;
+  margin: 0 1rem 1rem;
+  text-align: left;
+  line-height: 1.5;
+  flex: 1; /* Растягиваем текст для заполнения пространства */
+}
+
+.masonry_item {
+  grid-row: span 17;
+}
+
+.masonry_item__short {
+  grid-row: span 13;
+}
+
+.masonry_item__tall {
+  grid-row: span 30;
+}
+
+
+
+
+
+/* -------------------- 1024px -------------------- */
+@media (max-width: 1024px) {
+  .hero_content h1 {
+    font-size: 38px;
+  }
+
+  .card_text h3 {
+    font-size: 24px;
+    color: #415167;
+    margin-bottom: 0.5rem;
+  }
+
+  #catalog .buttons {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  #catalog .btn1, 
+  #catalog .btn2 {
+    padding: 10px 15px;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: 110px;
+  }
+  
+  #combo .buttons {
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+  
+  #combo .btn1, .btn2 {
+    padding: 10px 40px;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: 110px;
+  }
+  
+  .card_carusel {
+    max-width: 900px;
+    gap: 1.5rem;
+  }
+  
+  
+  #combo {
+    padding: 3rem 1rem;
+    overflow: hidden;
+  }
+  
+  #combo .combo_carusel .combo_card:nth-child(4),
+  #combo .combo_carusel .combo_card {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  .combo_carusel {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 900px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    gap: 1.5rem;
+  }
+
+  .combo_card {
+    width: 95%;
+    margin: 0 0 15px 15px;
+    flex-direction: column;
+    height: auto;
+    min-height: 380px;
+    box-sizing: border-box;
+  }
+  
+  .combo_text {
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .combo_carousel_btn {
+    display: none;
+  }
+  
+}
+
+/* -------------------- 960px -------------------- */
+@media (max-width: 960px) {
+  .hero_content h1 {
+    font-size: 32px;
+  }
+  
+  .semisemititle {
+    font-size: 17px;
+  }
+  
+  .semititle {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  .logo{
+    left: 5vw;
+  }
+      
+  .about_container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .card_about {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #catalog {
+    padding: 3rem 1rem;
+    overflow: hidden;
+  }
+  
+  #catalog .card_carusel .card:nth-child(n+5),
+  #catalog .card_carusel .card {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  .card_carusel {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 1100px;
+  }
+
+  .card {
+    flex-direction: column;
+    height: auto;
+    min-height: 380px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .item_img {
+    flex: 0 0 200px;
+    width: 100%;
+  }
+  
+  .card_text {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .btn1, .btn2 {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+  }
+  
+  .carousel_btn {
+    display: none;
+  }
+  
+  #giftset {
+    padding: 3rem 1rem;
+  }
+  
+  .giftset_card.active {
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .gift_buttons {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+  }
+  
+  .gift_btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  #combo .buttons {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  
+  .masonry-item__content {
+    padding: 1.2rem;
+  }
+  
+  .masonry-item__title {
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* -------------------- 768px -------------------- */
+@media (max-width: 768px) {
+  .menu {
+    justify-content: flex-end;
+    padding-right: 70px;
+    height: 20px;
+  }
+  
+  .menu::before {
+    content: '☰';
+    position: absolute;
+    left: auto;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    cursor: pointer;
+    color: #2b3646;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+  }
+  
+  .basket {
+    right: 70px;
+    transform: translateY(-50%);
+  }
+  
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.98);
+    padding-top: 20px;
+    padding-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .nav__list.active {
+    display: flex;
+  }
+  
+  .nav__item {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .nav__link {
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 18px;
+  }
+  
+  .masonry-item__content {
+    padding: 1rem;
+  }
+  
+  .masonry-item__title {
+    font-size: 16px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .masonry-item__text {
+    font-size: 13px;
+  }
+}
+
+/* -------------------- 640px -------------------- */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .hero_content h1 {
+    font-size: 26px;
+    top: 50px;
+    left: 130px;
+  }
+  
+  .semisemititle {
+    font-size: 15px;
+  }
+  
+  .semititle {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+  
+  #hero {
+    background: linear-gradient(to bottom, #ffffff 50%, #415167 50%);
+    min-height: 70vh;
+  }
+  
+  .logo {
+    left: 15px;
+    top: 85px;
+  }
+  
+  .logo img {
+    width: 80px;
+  }
+  
+  .banner {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    top: 160px;
+  }
+  
+  .hero_content {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-top: 8vh;
+  }
+  
+  .menu {
+    padding-right: 60px;
+  }
+  
+  .menu::before {
+    right: 15px;
+  }
+  
+  .basket {
+    right: 60px;
+  }
+  
+  .nav__list {
+    top: 50px;
+    height: calc(100vh - 50px);
+  }
+  
+  .nav__link {
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+  }
+  
+  .about_container {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .card_about {
+    padding: 1.2rem;
+  }
+  
+  .card_about h2 {
+    font-size: 18px;
+  }
+  
+  #catalog {
+    padding: 2rem 0.5rem;
+  }
+  
+  .card_carusel {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    min-height: auto;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .card {
+    min-height: 350px;
+  }
+  
+  .item_img {
+    flex: 0 0 160px;
+  }
+  
+  .card_text {
+    padding: 1.2rem;
+  }
+  
+  .card_text h3 {
+    font-size: 20px;
+  }
+  
+  .buttons {
+    gap: 0.5rem;
+  }
+  
+  #giftset {
+    padding: 2rem 0.5rem;
+  }
+  
+  .giftset_card.active {
+    width: 95%;
+    max-width: 350px;
+  }
+  
+  .giftset_desc {
+    padding: 1.2rem;
+  }
+  
+  .giftset_desc h2 {
+    font-size: 18px;
+  }
+  
+  .gift_buttons {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .gift_btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  #combo {
+    padding: 2rem 0.5rem;
+  }
+  
+  .combo_carusel {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .combo_text h3 {
+    font-size: 18px;
+  }
+  
+  .btn1, .btn2 {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+  
+  footer {
+    padding: 1.2rem;
+  }
+  
+  footer p {
+    font-size: 13px;
+  }
+  
+  .masonry-item__content {
+    padding: 0.9rem;
+  }
+  
+  .masonry-item__title {
+    font-size: 15px;
+    margin-bottom: 0.6rem;
+  }
+  
+  .masonry-item__text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* -------------------- 360px -------------------- */
+@media (max-width: 360px) {
+
+  .logo {
+    left: 15px;
+    top: 50px;
+  }
+
+  .hero_content h1 {
+    font-size: 22px;
+    top: 100px;
+    left: 18px;
+  }
+
+  .banner {
+    height: 250px;
+    margin-top: 50px;
+  }
+  
+  .semititle {
+    font-size: 18px;
+  }
+  
+  .card_text h3,
+  .combo_text h3 {
+    font-size: 17px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+  
+  .btn1, .btn2 {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .masonry-item__content {
+    padding: 0.8rem;
+  }
+  
+  .masonry-item__title {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
 }
