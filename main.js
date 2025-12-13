@@ -149,32 +149,83 @@ function initGiftset() {
 
 // Бургер-меню
 function initBurgerMenu() {
-  const burgerBtn = document.querySelector(".menu");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
   const navList = document.querySelector(".nav__list");
+  const body = document.body;
 
-  if (burgerBtn && navList) {
-    burgerBtn.addEventListener("click", function (e) {
-      // Проверяем, что кликнули именно на бургер (не на другие элементы меню)
-      if (e.target === burgerBtn || e.target.classList.contains("menu")) {
-        navList.classList.toggle("active");
-      }
-    });
+  if (!menuToggle || !nav) return;
 
-    // Закрытие меню при клике на ссылку
-    const navLinks = document.querySelectorAll(".nav__link");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navList.classList.remove("active");
-      });
-    });
+  // Создаем оверлей для меню
+  const navOverlay = document.createElement("div");
+  navOverlay.className = "nav-overlay";
+  document.body.appendChild(navOverlay);
 
-    // Закрытие меню при клике вне его
-    document.addEventListener("click", function (e) {
-      if (!navList.contains(e.target) && !burgerBtn.contains(e.target)) {
-        navList.classList.remove("active");
-      }
-    });
+  // Функция открытия/закрытия меню
+  function toggleMenu() {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+
+    // Переключаем состояния
+    menuToggle.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", !isExpanded);
+    nav.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+    body.classList.toggle("menu-open");
+
+    // Блокируем скролл при открытом меню
+    body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
   }
+
+  // Обработчики событий
+  menuToggle.addEventListener("click", toggleMenu);
+  navOverlay.addEventListener("click", toggleMenu);
+
+  // Закрытие меню при клике на ссылку
+  const navLinks = document.querySelectorAll(".nav__link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Закрытие меню при нажатии Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
+
+  // Закрытие меню при изменении размера окна (если перешли на десктоп)
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && nav.classList.contains("active")) {
+      toggleMenu();
+    }
+  });
+}
+
+// Кнопка "Наверх"
+function initScrollToTop() {
+  const scrollTopButton = document.getElementById("scrollTop");
+
+  if (!scrollTopButton) return;
+
+  // Показываем кнопку после скролла
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopButton.classList.add("visible");
+    } else {
+      scrollTopButton.classList.remove("visible");
+    }
+  });
+
+  // Прокрутка к началу страницы
+  scrollTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+    });
+  });
 }
 
 // Инициализация всех каруселей
@@ -196,4 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Инициализация бургер-меню
   initBurgerMenu();
+
+  // Инициализация кнопки "Наверх"
+  initScrollToTop();
 });

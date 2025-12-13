@@ -85,6 +85,44 @@ header {
     color: #2b3646;
 }
 
+/* ================================ */
+
+.menu_toggle {
+    left: 50vw;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    background-color: #4151673c;
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+.menu_toggle__line {
+    width: 100%;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu_toggle.active .menu_toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu_toggle.active .menu_toggle__line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu_toggle.active .menu_toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 .basket img {
     width: 24px;
     height: 24px;
@@ -96,6 +134,8 @@ header {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    background-color: #4151673c;
+    border-radius: 10px;
 }
 
 .basket button {
@@ -622,7 +662,7 @@ footer p {
 
 .masonry_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-auto-rows: 10px;
   gap: 1rem;
   margin: 2rem auto 0;
@@ -683,9 +723,33 @@ footer p {
   grid-row: span 30;
 }
 
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background: #C7A17A;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-
-
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* -------------------- 1024px -------------------- */
 @media (max-width: 1024px) {
@@ -893,6 +957,9 @@ footer p {
     gap: 10px;
   }
   
+.masonry_grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
   .masonry-item__content {
     padding: 1.2rem;
   }
@@ -904,81 +971,153 @@ footer p {
 
 /* -------------------- 768px -------------------- */
 @media (max-width: 768px) {
+  header {
+    top: -20px;
+    padding: 0px 0;
+    background-color: rgba(65,81,103, 0.0);
+  }
+
+  #hero {
+    top: 20px;
+  }
+
   .menu {
     justify-content: flex-end;
     padding-right: 70px;
-    height: 20px;
+    height: 70px;
+    position: relative;
   }
   
-  .menu::before {
-    content: '☰';
-    position: absolute;
-    left: auto;
+  .scroll-top {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
     right: 20px;
-    top: 50%;
+    font-size: 22px;
+  }
+
+  .menu-toggle {
+    display: flex; 
+    position: absolute;
+    right: 20px;
+    top: 45px;
     transform: translateY(-50%);
-    font-size: 28px;
-    cursor: pointer;
-    color: #2b3646;
-    z-index: 1001;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: transparent;
     border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .menu_toggle__line {
+    width: 100%;
+    height: 3px;
+    background: #2b3646;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active .menu_toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .menu-toggle.active .menu_toggle__line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .menu_toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
   
   .basket {
-    right: 70px;
+    position: absolute;
+    top: 45px;
     transform: translateY(-50%);
   }
   
-  .nav__list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background: rgba(255, 255, 255, 0.98);
-    padding-top: 20px;
-    padding-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 999;
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    padding: 80px 30px 30px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
     margin: 0;
-    border-radius: 0 0 8px 8px;
   }
   
-  .nav__list.active {
+  .nav.active {
+    right: 0;
+  }
+  
+  .nav__list {
+    flex-direction: column;
+    gap: 0;
     display: flex;
   }
   
   .nav__item {
-    margin: 0;
     width: 100%;
+    margin: 0 !important;
   }
   
   .nav__link {
     display: block;
-    padding: 1rem 2rem;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    padding: 15px 0;
     font-size: 18px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
   }
   
-  .masonry-item__content {
+  .nav__link:hover,
+  .nav__link.active {
+    background: transparent;
+    color: #C7A17A;
+    padding-left: 10px;
+  }
+  
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
+    display: none;
+  }
+  
+  .nav-overlay.active {
+    display: block;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  .masonry_grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .masonry_item__content {
     padding: 1rem;
   }
   
-  .masonry-item__title {
+  .masonry_item__title {
     font-size: 16px;
     margin-bottom: 0.7rem;
   }
   
-  .masonry-item__text {
+  .masonry_item__text {
     font-size: 13px;
   }
 }
@@ -1014,6 +1153,12 @@ footer p {
     top: 85px;
   }
   
+  .basket {
+    left: 20px;
+    scale: 0.9;
+    top: 45px;
+  }
+  
   .logo img {
     width: 80px;
   }
@@ -1030,19 +1175,15 @@ footer p {
     position: relative;
     margin: 0 auto;
     padding: 0 1rem;
-    margin-top: 8vh;
   }
   
   .menu {
     padding-right: 60px;
+    bottom: 0;
   }
   
   .menu::before {
     right: 15px;
-  }
-  
-  .basket {
-    right: 60px;
   }
   
   .nav__list {
@@ -1158,6 +1299,14 @@ footer p {
     font-size: 13px;
   }
   
+.masonry_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 10px;
+  gap: 1rem;
+  margin: 2rem auto 0;
+}
+  
   .masonry-item__content {
     padding: 0.9rem;
   }
@@ -1175,6 +1324,11 @@ footer p {
 
 /* -------------------- 360px -------------------- */
 @media (max-width: 360px) {
+  .basket {
+    left: 10px;
+    scale: 0.8;
+    top: 40px;
+  }
 
   .logo {
     left: 15px;
